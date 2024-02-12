@@ -20,7 +20,7 @@ OR
 
   - Create a `.env` at the root level of the project and copy the content of `.env.sample` over
   - Update the `MONGODB_URI` with a valid mongodb URI. 
-  - Optional: Change the `JWT_SECRET` to another secret 
+  - Update the `JWT_SECRET` var with the correct secret
 
 
 <h2> Running the app </h2>
