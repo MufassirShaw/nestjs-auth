@@ -12,6 +12,12 @@ async function bootstrap() {
     }),
   );
   const config = app.get(ConfigService);
+  app.enableCors({
+    origin: '*',
+    methods: ['GET', 'POST'],
+    allowedHeaders: 'Content-Type, Accept, Authorization',
+    credentials: true,
+  });
   await app.listen(config.get('port') || 3000);
 }
 bootstrap();

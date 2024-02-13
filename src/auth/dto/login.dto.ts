@@ -1,4 +1,8 @@
-import { OmitType } from '@nestjs/mapped-types';
-import { SignupDto } from './signup.dto';
+import { IsEmail, IsString } from 'class-validator';
+export class LoginDto {
+  @IsEmail()
+  readonly email: string;
 
-export class LoginDto extends OmitType(SignupDto, ['name']) {}
+  @IsString()
+  readonly password: string;
+}
